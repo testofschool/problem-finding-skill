@@ -1,0 +1,12 @@
+SYNTHETIC SAMPLE RULES PAGE (not a real contest)
+
+Why we run this: We want small clinics to adopt the ExampleCo scheduling API in daily work.
+Who decides: Finalists are chosen by a panel of five judges. Public votes are shown but do not count.
+Eligibility: Each team has one to four members. Entries must be built during the event window.
+
+Judging criteria
+Real-world usefulness (40%)
+Use of the ExampleCo API (30%)
+Clarity of the demo (30%)
+
+Finals: Each finalist presents for 5 minutes followed by 3 minutes of questions. Decks are limited to 10 slides including the cover, PDF only.

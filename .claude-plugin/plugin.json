@@ -1,0 +1,4 @@
+{
+  "name": "hackathon-win-protocol",
+  "description": "Builds an evidence-backed submission for judged hackathons and contests: reads organizer intent, past winners, judge panel, rubric and format limits from primary sources, then gates evidence-backed ideas and a proof for every criterion with one script. Use for '해커톤 어떻게 접근하지', '주최 의도랑 심사위원 분석해줘', '공모전 뽑히려면', 'how do I win this hackathon'. Not for metric-scored leaderboards."
+}

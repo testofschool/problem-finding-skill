@@ -1,0 +1,11 @@
+[
+ {"id": "hwp-explicit-1", "kind": "explicit", "query": "/hackathon-win-protocol 다음 달 해커톤 본선 준비해줘", "should_trigger": true},
+ {"id": "hwp-implicit-1", "kind": "implicit", "query": "이번 공모전 주최 의도랑 심사위원이 누군지부터 분석해줘", "should_trigger": true},
+ {"id": "hwp-implicit-2", "kind": "implicit", "query": "이 해커톤 평가 지표랑 PPT 장수 제한이 어떻게 되는지 원문에서 확인해줘", "should_trigger": true},
+ {"id": "hwp-implicit-3", "kind": "implicit", "query": "이전 우승작들 보고 이번엔 뭘 내야 뽑힐지 근거 있는 아이디어로 줘", "should_trigger": true},
+ {"id": "hwp-implicit-4", "kind": "implicit", "query": "How do I win this hackathon? Here is the rules page.", "should_trigger": true},
+ {"id": "hwp-contextual-1", "kind": "contextual", "query": "스폰서 API 써야 하는 데모데이가 2주 남았고 평가표는 아직 안 나왔어. 팀은 3명이야. 뭐부터 해야 해?", "should_trigger": true},
+ {"id": "hwp-negative-1", "kind": "negative", "query": "리더보드 점수로 순위 매기는 대회인데 검증 점수가 0.02 올랐어. 이 축 계속 밀어도 돼?", "should_trigger": false, "routes_to": "none", "note": "Metric-scored; out of scope by design."},
+ {"id": "hwp-negative-2", "kind": "negative", "query": "발표 리허설 봐주고 말투랑 제스처 피드백 줘", "should_trigger": false, "routes_to": "none", "note": "Presentation coaching was removed from this skill."},
+ {"id": "hwp-negative-3", "kind": "negative", "query": "투자자 미팅용 IR 덱 피드백 좀 줘", "should_trigger": false, "routes_to": "none", "note": "No contest, rubric or judges."}
+]

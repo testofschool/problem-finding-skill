@@ -1,0 +1,302 @@
+{
+ "contest": "SYNTHETIC SAMPLE: not a real contest; it shows the shape the gate expects",
+ "goal": {
+  "target": "finalist (top 8)",
+  "signal": "team name on the finalist list published 2030-01-10"
+ },
+ "documents": [
+  {
+   "layer": "announcement",
+   "source": "https://example.org/exampleco-hack",
+   "read": "summary"
+  },
+  {
+   "layer": "rules",
+   "source": "file:rules.sample.txt",
+   "read": "raw",
+   "bytes": 586
+  },
+  {
+   "layer": "form",
+   "source": "screenshot of the submission form, 2030-01-02",
+   "read": "screenshot"
+  }
+ ],
+ "decider": {
+  "who": "panel",
+  "quote": "Finalists are chosen by a panel of five judges. Public votes are shown but do not count.",
+  "source": "file:rules.sample.txt"
+ },
+ "eligibility": [
+  {
+   "clause": "Each team has one to four members.",
+   "source": "file:rules.sample.txt",
+   "met": "yes"
+  },
+  {
+   "clause": "Entries must be built during the event window.",
+   "source": "file:rules.sample.txt",
+   "met": "yes"
+  }
+ ],
+ "host_intent": [
+  {
+   "claim": "the sponsor wants clinics to use its scheduling API every day",
+   "quote": "We want small clinics to adopt the ExampleCo scheduling API in daily work.",
+   "source": "file:rules.sample.txt"
+  }
+ ],
+ "rubric": {
+  "status": "published",
+  "source": "file:rules.sample.txt",
+  "criteria": [
+   {
+    "id": "C1",
+    "verbatim": "Real-world usefulness",
+    "weight": 40
+   },
+   {
+    "id": "C2",
+    "verbatim": "Use of the ExampleCo API",
+    "weight": 30
+   },
+   {
+    "id": "C3",
+    "verbatim": "Clarity of the demo",
+    "weight": 30
+   }
+  ]
+ },
+ "winners": {
+  "status": "found",
+  "entries": [
+   {
+    "name": "Entry A",
+    "event": "ExampleCo Hack 2029",
+    "result": "winner",
+    "judge_saw": "a receptionist booking a real slot in 20 seconds, API log on screen",
+    "source": "https://example.org/2029/winners"
+   },
+   {
+    "name": "Entry B",
+    "event": "ExampleCo Hack 2029",
+    "result": "finalist",
+    "judge_saw": "a before/after no-show count from one clinic",
+    "source": "https://example.org/2029/finalists"
+   },
+   {
+    "name": "Entry C",
+    "event": "ExampleCo Hack 2029",
+    "result": "not_selected",
+    "judge_saw": "a chatbot with no API call visible",
+    "source": "https://example.org/2029/gallery"
+   }
+  ],
+  "search_log": [
+   {
+    "query": "ExampleCo Hack 2029 winners",
+    "surface": "organizer site",
+    "outcome": "hits"
+   },
+   {
+    "query": "ExampleCo Hack 2029 demo video",
+    "surface": "video site",
+    "outcome": "blocked"
+   }
+  ]
+ },
+ "judges": {
+  "status": "announced",
+  "source": "https://example.org/exampleco-hack/judges",
+  "panel": [
+   {
+    "name": "J. Sample",
+    "affiliation": {
+     "value": "ExampleCo, head of developer relations",
+     "source": "https://example.org/exampleco-hack/judges"
+    },
+    "background": {
+     "value": "former clinic operations manager",
+     "source": "https://example.org/exampleco-hack/judges"
+    },
+    "signals": [
+     {
+      "quote": "I stop listening when the API call is a slide instead of a request.",
+      "source": "https://example.org/talks/sample-2029"
+     }
+    ],
+    "implications": [
+     {
+      "change": "show the live request log in the first 30 seconds",
+      "signal": 0
+     }
+    ]
+   },
+   {
+    "name": "K. Example",
+    "affiliation": {
+     "value": "Sample Clinic, director",
+     "source": "https://example.org/exampleco-hack/judges"
+    },
+    "signals": [],
+    "signals_searched": true
+   }
+  ]
+ },
+ "limits": {
+  "presentation": {
+   "required": true,
+   "quote": "Each finalist presents for 5 minutes followed by 3 minutes of questions.",
+   "source": "file:rules.sample.txt"
+  },
+  "slides": {
+   "status": "stated",
+   "value": "10 including the cover",
+   "quote": "Decks are limited to 10 slides including the cover, PDF only.",
+   "source": "file:rules.sample.txt"
+  },
+  "minutes": {
+   "status": "stated",
+   "value": "5",
+   "quote": "Each finalist presents for 5 minutes followed by 3 minutes of questions.",
+   "source": "file:rules.sample.txt"
+  },
+  "qa_minutes": {
+   "status": "stated",
+   "value": "3",
+   "quote": "Each finalist presents for 5 minutes followed by 3 minutes of questions.",
+   "source": "file:rules.sample.txt"
+  },
+  "file_format": {
+   "status": "stated",
+   "value": "PDF",
+   "quote": "Decks are limited to 10 slides including the cover, PDF only.",
+   "source": "file:rules.sample.txt"
+  }
+ },
+ "self_rules": [
+  {
+   "id": "S1",
+   "rule": "never show an API call that is not live",
+   "vacates": []
+  }
+ ],
+ "ideas": [
+  {
+   "id": "F",
+   "kind": "field_default",
+   "label": "a chatbot that answers patient questions",
+   "basis": "3 of 5 entries opened in the 2029 gallery were chatbots: https://example.org/2029/gallery"
+  },
+  {
+   "id": "A",
+   "kind": "proposal",
+   "label": "same-day gap filler: texts the waitlist when a slot opens",
+   "derived_from": [
+    "I0",
+    "C1"
+   ],
+   "covers": {
+    "C1": "slots refilled per week at one clinic, counted",
+    "C2": "live booking request and response on screen",
+    "C3": "one screen, one tap, 20 seconds"
+   },
+   "origin": "external",
+   "origin_source": "https://example.org/2029/finalists",
+   "kill": {
+    "verdict": "wounded",
+    "sentence": "The waitlist feature exists in the sponsor's paid tier.",
+    "source": "https://example.org/exampleco/pricing"
+   },
+   "beats_field": "the judge watches a real slot get filled through the API instead of reading a chat transcript",
+   "evidence": [
+    {
+     "claim": "clinics lose bookable time to late cancellations",
+     "quote": "Of 412 appointments in March, 61 were cancelled inside 24 hours and 9 were refilled.",
+     "source": "Sample Clinic booking export, March 2029 (synthetic)",
+     "tier": "primary",
+     "kind": "base_rate"
+    },
+    {
+     "claim": "the sponsor counts daily use as success",
+     "quote": "We want small clinics to adopt the ExampleCo scheduling API in daily work.",
+     "source": "file:rules.sample.txt",
+     "tier": "primary",
+     "kind": "other"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "kind": "proposal",
+   "label": "no-show predictor dashboard",
+   "derived_from": [
+    "C1"
+   ],
+   "covers": {
+    "C1": "predicted no-shows listed each morning"
+   },
+   "origin": "own",
+   "origin_source": "",
+   "kill": {
+    "verdict": "wounded",
+    "sentence": "A prediction with no action leaves the slot empty; ambiguous whether judges count that as useful."
+   }
+  },
+  {
+   "id": "C",
+   "kind": "proposal",
+   "label": "voice booking line",
+   "derived_from": [
+    "C3"
+   ],
+   "covers": {
+    "C3": "a phone call books a slot"
+   },
+   "origin": "own",
+   "origin_source": "",
+   "kill": {
+    "verdict": "stood"
+   }
+  }
+ ],
+ "pick": "A",
+ "case": [
+  {
+   "criterion": "C1",
+   "judge_sees": "9 of 61 late cancellations refilled before, 38 of 61 after (one clinic, one month)",
+   "where": "slide 3; demo 0:40",
+   "proof": {
+    "value": "38/61",
+    "source": "clinic export, sheet 'March', attached as appendix"
+   }
+  },
+  {
+   "criterion": "C2",
+   "judge_sees": "the booking request and the 201 response scrolling beside the app",
+   "where": "demo 0:15",
+   "proof": {
+    "value": "request log",
+    "source": "recorded run 2030-01-05, logs/run1.txt"
+   }
+  },
+  {
+   "criterion": "C3",
+   "judge_sees": "one tap fills the slot in 20 seconds",
+   "where": "demo 0:00 to 0:20",
+   "proof": {
+    "value": "20 s",
+    "source": "stopwatch, recorded run 2030-01-06"
+   }
+  }
+ ],
+ "empty_run": {
+  "applies": true,
+  "invoked_as": "open the demo link with no login",
+  "result": "pass",
+  "log": "logs/empty-run-2030-01-06.txt"
+ },
+ "deck": {
+  "slides_planned": 8
+ }
+}
